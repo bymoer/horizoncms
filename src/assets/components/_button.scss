@@ -1,0 +1,27 @@
+/*
+* Navbar Buttons
+*/
+
+.layout-navbar-container{
+
+    ul{
+
+        height: 100%;
+        align-items: stretch;
+
+        li{
+
+            width: 125px;
+
+            a{
+                @include clear-link-styling;
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+
+            }
+            
+        }
+    }
+}

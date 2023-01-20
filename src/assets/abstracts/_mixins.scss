@@ -1,0 +1,54 @@
+/*
+* Main layout
+*/
+@mixin display-grid {
+    display: grid;
+}
+
+@mixin display-grid-cols-main {
+    grid-template-columns: 200px auto;
+}
+
+@mixin display-grid-rows-main {
+    grid-template-rows: [navbar]75px [list-detail]repeat(auto-fill, calc(100vh - 75px));
+}
+
+@mixin display-grid-template-1 {
+    grid-template-areas: "layout-navbar-container layour-navbar-container"
+                         "layout-site-list-container layout-site-details-container";
+}
+
+/*
+* Details layout
+*/
+@mixin display-grid-cols-details {
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin display-grid-rows-details {
+    grid-template-rows: [information-detail] 1fr [productionchart] 1fr;
+}
+
+@mixin display-grid-template-2 {
+    grid-template-areas: "selected-site-chart selected-site-chart"
+                         "selected-site-details selected-site-production";
+}
+
+@mixin display-flex {
+    display: flex;
+}
+
+/*
+* Paddings & margins
+*/
+@mixin padding-10{
+    padding: 10px;
+}
+
+@mixin padding-15{
+    padding: 15px;
+}
+
+@mixin padding-20{
+    padding: 20px;
+}

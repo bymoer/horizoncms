@@ -1,0 +1,111 @@
+*{
+    font-family: $main-font;
+}
+
+body{
+    background-color: $body-bg-color;
+}
+
+div#root{
+    @include display-grid;
+    @include display-grid-cols-main;
+    @include display-grid-rows-main;
+    @include display-grid-template-1;
+    gap: 15px 15px;
+}
+
+.layout-navbar-container {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.layout-site-list-container {
+    @include padding-10;
+    grid-area: layout-site-list-container;
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    background-color: #ffffff;
+
+    div{
+
+        div{
+            @include display-flex;
+            margin-bottom: 10px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div:hover{
+            cursor: pointer;
+            background-color: $navbar-button-hover;
+            color: #ffffff;
+        }
+
+    }
+
+}
+
+.layout-site-details-container {
+    @include display-grid-rows-details;
+    grid-area: layout-site-details-container;
+}
+
+/*
+*   Home Screen
+*/
+
+.layout-home-screen {
+    grid-column-start: layout-site-list-container;
+    grid-column-end: layout-site-details-container;
+
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+
+}
+
+/*
+*   Site details
+*/
+
+.layout-site-details-container {
+    @include display-grid;
+    @include display-grid-cols-details;
+    @include display-grid-template-2;    
+    gap: 15px 15px;
+
+    div{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+}
+
+.selected-site-chart {
+    @include padding-10;
+    grid-area: selected-site-chart;
+
+    background-color: #ffffff;
+}
+
+.selected-site-details {
+    @include padding-10;
+    grid-area: selected-site-details;
+}
+
+.selected-site-production {
+    @include padding-10;
+    grid-area: selected-site-production;
+}
+
+.selected-site-details,
+.selected-site-production {
+    background-color: #ffffff;
+}

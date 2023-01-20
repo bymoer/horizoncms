@@ -1,0 +1,29 @@
+.layout-navbar-container{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    background-color: $navbar-background-color;
+
+    ul{
+
+        @include display-flex;
+        
+
+        li {
+            
+            @include display-grid;
+            
+            a{
+            
+                @include display-flex;
+                color: $navbar-text-color;
+                
+            }
+            a:hover{
+                background-color: $navbar-button-hover;
+                
+            }
+
+        }
+
+    }
+}
